@@ -99,14 +99,14 @@
 				to_chat(user, "<span class='notice'>You start building a house window...</span>")
 				if(do_after(user, 100, target = src) && G.use(3))
 					var/turf/open/T = loc
-					T.new = /obj/structure/window/fulltile/house
+					new /obj/structure/window/fulltile/house(T)
 					qdel(src)
 					return TRUE
 			if(M.amount >= 3)
 				to_chat(user, "<span class='notice'>You start building a wood framed window...</span>")
 				if(do_after(user, 100, target = src) && M.use(3))
 					var/turf/open/T = loc
-					T.new = /obj/structure/window/fulltile/wood
+					new /obj/structure/window/fulltile/wood(T)
 					qdel(src)
 					return TRUE
 			else
