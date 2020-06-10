@@ -72,8 +72,8 @@
 			var/obj/item/stack/sheet/mineral/wood/W = I
 			var/obj/item/stack/sheet/cloth/C = I
 			var/obj/item/stack/sheet/leather/L = I //???
-			var/obj/item/stack/sheet/glass = G
-			var/obj/item/stack/sheet/rglass = M
+			var/obj/item/stack/sheet/glass/G = I
+			var/obj/item/stack/sheet/rglass/M = I
 			if(W.amount >= 3)
 				to_chat(user, "<span class='notice'>You start building a wall...</span>")
 				if(do_after(user, 100, target = src) && W.use(3))
